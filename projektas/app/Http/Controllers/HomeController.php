@@ -80,7 +80,7 @@ class HomeController extends Controller
     {
         return view('admin_pokalbio_langas');
     }
-    public function redauoti_profili()
+    public function redaguoti_profili()
     {
         return view('redaguoti_profili');
     }
