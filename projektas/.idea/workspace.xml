@@ -20,17 +20,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a982e707-7335-44c2-a077-78361b896764" name="Default Changelist" comment="Initial">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_klientai.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_klientas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_pagalbu_sarasas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_pokalbio_langas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_prideti_klienta.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_redaguoti_klienta.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_uzsak_saras.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/administracinis.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/administracinis.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/konstravimo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/konstravimo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/krepselioPatvirtinimas" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/krepselioPatvirtinimas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/krepselis.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/krepselis.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />

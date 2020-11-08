@@ -32,7 +32,7 @@ class HomeController extends Controller
     public function krepselioPatvirtinimas()
     {
         return view('krepselioPatvirtinimas');
-
+    }
     public function krepselis()
     {
         return view('krepselis');
