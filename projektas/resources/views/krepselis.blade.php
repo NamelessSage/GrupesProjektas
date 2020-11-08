@@ -4,7 +4,7 @@
     <p><a href="#">Krepselis</a></p>
     <p><a href="#">Prekiu kiekio padidinimas</a></p>
     <p><a href="#">Prekes pridejimas</a></p>
-    <p><a href="{{route('apziura')}}">Prekes apziura</a></p>
+    <p><a href="{{route('preke')}}">Prekes apziura</a></p>
     <p><a href="#">Prekiu kiekio pakeitimas</a></p>
     <form action="POST">
         <label for="kodas">Nuolaidos kodas:</label>
