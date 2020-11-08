@@ -25,4 +25,12 @@ class HomeController extends Controller
     {
         return view('home');
     }
+    public function apziura()
+    {
+        return view('apziura');
+    }
+    public function krepselioPatvirtinimas()
+    {
+        return view('krepselioPatvirtinimas');
+    }
 }
