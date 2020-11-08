@@ -21,6 +21,11 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/krepselis', [App\Http\Controllers\HomeController::class, 'krepselis'])->name('krepselis');
+Route::get('/administracinis', [App\Http\Controllers\HomeController::class, 'administracinis'])->name('administracinis');
+Route::get('/klientas', [App\Http\Controllers\HomeController::class, 'klientas'])->name('klientas');
+Route::get('/konstravimo', [App\Http\Controllers\HomeController::class, 'konstravimo'])->name('konstravimo');
+Route::get('/preke', [App\Http\Controllers\HomeController::class, 'apziura'])->name('preke');
+Route::get('/krepselioPatvirtinimas', [App\Http\Controllers\HomeController::class, 'krepselioPatvirtinimas'])->name('krepselioPatvirtinimas');
 Route::get('/klientas', [App\Http\Controllers\HomeController::class, 'klientas'])->name('klientas');
 Route::get('/konstravimo', [App\Http\Controllers\HomeController::class, 'konstravimo'])->name('konstravimo');
 Route::get('/pagalba', [App\Http\Controllers\HomeController::class, 'pagalba'])->name('pagalba');
@@ -36,4 +41,3 @@ Route::get('/administracinis/admin_klientas', [App\Http\Controllers\HomeControll
 Route::get('/administracinis/admin_redaguoti_klienta', [App\Http\Controllers\HomeController::class, 'admin_redaguoti_klienta'])->name('admin_redaguoti_klienta');
 Route::get('/administracinis/admin_pagalbos_sarasas', [App\Http\Controllers\HomeController::class, 'admin_pagalbos_sarasas'])->name('admin_pagalbos_sarasas');
 Route::get('/administracinis/admin_pokalbio_langas', [App\Http\Controllers\HomeController::class, 'admin_pokalbio_langas'])->name('admin_pokalbio_langas');
-
