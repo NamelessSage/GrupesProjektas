@@ -19,15 +19,18 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a982e707-7335-44c2-a077-78361b896764" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/administracinis.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/klientas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/konstravimo.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/krepselis.blade.php" afterDir="false" />
+    <list default="true" id="a982e707-7335-44c2-a077-78361b896764" name="Default Changelist" comment="Initial">
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_klientai.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_klientas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_pagalbu_sarasas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_pokalbio_langas.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_prideti_klienta.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_redaguoti_klienta.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/admin_uzsak_saras.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/administracinis.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/administracinis.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/konstravimo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/konstravimo.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -40,6 +43,19 @@
     <execution />
   </component>
   <component name="Git.Settings">
+    <favorite-branches>
+      <branch-storage>
+        <map>
+          <entry type="LOCAL">
+            <value>
+              <list>
+                <branch-info repo="$PROJECT_DIR$/.." source="AdministracineDalis" />
+              </list>
+            </value>
+          </entry>
+        </map>
+      </branch-storage>
+    </favorite-branches>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
@@ -181,8 +197,16 @@
       <option name="presentableId" value="Default" />
       <updated>1604589768574</updated>
       <workItem from="1604589769797" duration="454000" />
-      <workItem from="1604834307600" duration="2065000" />
+      <workItem from="1604834307600" duration="5732000" />
     </task>
+    <task id="LOCAL-00001" summary="Initial">
+      <created>1604836414989</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604836414989</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -199,5 +223,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="705" y="309" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604838195093">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="705" y="309" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604838195093" />
   </component>
 </project>
