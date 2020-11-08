@@ -24,3 +24,5 @@ Route::get('/krepselis', [App\Http\Controllers\HomeController::class, 'krepselis
 Route::get('/administracinis', [App\Http\Controllers\HomeController::class, 'administracinis'])->name('administracinis');
 Route::get('/klientas', [App\Http\Controllers\HomeController::class, 'klientas'])->name('klientas');
 Route::get('/konstravimo', [App\Http\Controllers\HomeController::class, 'konstravimo'])->name('konstravimo');
+Route::get('/pagalba', [App\Http\Controllers\HomeController::class, 'pagalba'])->name('pagalba');
+Route::get('/redaguoti_profili', [App\Http\Controllers\HomeController::class, 'redaguoti_profili'])->name('redaguoti_profili');
