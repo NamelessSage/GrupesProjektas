@@ -87,4 +87,16 @@ class HomeController extends Controller
     {
         return view('admin_pokalbio_langas');
     }
+    public function redauoti_profili()
+    {
+        return view('redaguoti_profili');
+    }
+    public function atsiliepimai()
+    {
+        return view('atsiliepimai');
+    }
+    public function pagalba()
+    {
+        return view('pagalba');
+    }
 }

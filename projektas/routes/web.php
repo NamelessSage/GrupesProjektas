@@ -30,6 +30,7 @@ Route::get('/klientas', [App\Http\Controllers\HomeController::class, 'klientas']
 Route::get('/konstravimo', [App\Http\Controllers\HomeController::class, 'konstravimo'])->name('konstravimo');
 Route::get('/pagalba', [App\Http\Controllers\HomeController::class, 'pagalba'])->name('pagalba');
 Route::get('/redaguoti_profili', [App\Http\Controllers\HomeController::class, 'redaguoti_profili'])->name('redaguoti_profili');
+Route::get('/atsiliepimai', [App\Http\Controllers\HomeController::class, 'atsiliepimai'])->name('atsiliepimai');
 
 
 //administracine dalis
