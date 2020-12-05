@@ -4,3 +4,5 @@
 *.xml
 projektas/.idea/workspace.xml
 
+projektas/.env
+.idea/GrupesProjektas.iml
