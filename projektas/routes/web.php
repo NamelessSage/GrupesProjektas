@@ -20,18 +20,18 @@ Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/krepselis', [App\Http\Controllers\HomeController::class, 'krepselis'])->name('krepselis');
-Route::get('/administracinis', [App\Http\Controllers\HomeController::class, 'administracinis'])->name('administracinis');
-Route::get('/klientas', [App\Http\Controllers\HomeController::class, 'klientas'])->name('klientas');
 Route::get('/konstravimo', [App\Http\Controllers\HomeController::class, 'konstravimo'])->name('konstravimo');
 Route::get('/preke', [App\Http\Controllers\HomeController::class, 'apziura'])->name('preke');
 Route::get('/krepselioPatvirtinimas', [App\Http\Controllers\HomeController::class, 'krepselioPatvirtinimas'])->name('krepselioPatvirtinimas');
-Route::get('/klientas', [App\Http\Controllers\HomeController::class, 'klientas'])->name('klientas');
 Route::get('/konstravimo', [App\Http\Controllers\HomeController::class, 'konstravimo'])->name('konstravimo');
-Route::get('/pagalba', [App\Http\Controllers\HomeController::class, 'pagalba'])->name('pagalba');
-Route::get('/redaguoti_profili', [App\Http\Controllers\HomeController::class, 'redaguoti_profili'])->name('redaguoti_profili');
-Route::post('/redaguoti_profili', [App\Http\Controllers\HomeController::class, 'redaguoti_profilipost'])->name('redaguoti_profilipost');
-Route::get('/atsiliepimai', [App\Http\Controllers\HomeController::class, 'atsiliepimai'])->name('atsiliepimai');
-Route::get('/delete_user', [App\Http\Controllers\HomeController::class, 'delete_user'])->name('delete_user');
+
+//Kliento dalis
+Route::get('/klientas', [App\Http\Controllers\KlientoController::class, 'klientas'])->name('klientas');
+Route::get('/redaguoti_profili', [App\Http\Controllers\KlientoController::class, 'redaguoti_profili'])->name('redaguoti_profili');
+Route::post('/redaguoti_profili', [App\Http\Controllers\KlientoController::class, 'redaguoti_profilipost'])->name('redaguoti_profilipost');
+Route::get('/atsiliepimai', [App\Http\Controllers\KlientoController::class, 'atsiliepimai'])->name('atsiliepimai');
+Route::get('/delete_user', [App\Http\Controllers\KlientoController::class, 'delete_user'])->name('delete_user');
+Route::get('/pagalba', [App\Http\Controllers\KlientoController::class, 'pagalba'])->name('pagalba');
 
 
 //administracine dalis
