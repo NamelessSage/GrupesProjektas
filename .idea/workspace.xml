@@ -26,6 +26,7 @@
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
+
       <path value="$PROJECT_DIR$/projektas/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/projektas/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/projektas/vendor/phpunit/php-code-coverage" />
@@ -132,6 +133,7 @@
       <path value="$PROJECT_DIR$/projektas/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/projektas/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/projektas/vendor/guzzlehttp/promises" />
+
     </include_path>
   </component>
   <component name="ProjectId" id="1k0UfOJVTOBbDkd5pefSo1IQjqM" />
@@ -178,5 +180,11 @@
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="WindowStateProjectService">
+    <state x="2334" y="180" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1607179237199">
+      <screen x="1920" y="0" width="1920" height="1042" />
+    </state>
+    <state x="2334" y="180" width="1092" height="728" key="#com.intellij.execution.impl.EditConfigurationsDialog/1920.0.1920.1042/0.0.1536.834@1920.0.1920.1042" timestamp="1607179237199" />
   </component>
 </project>
