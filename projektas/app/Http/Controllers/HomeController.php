@@ -47,34 +47,4 @@ class HomeController extends Controller
         return view('konstravimo');
     }
 
-    public function klientas()
-    {
-        return view('klientas');
-    }
-
-    public function redaguoti_profili()
-    {
-        return view('redaguoti_profili');
-    }
-    public function atsiliepimai()
-    {
-        return view('atsiliepimai');
-    }
-    public function pagalba()
-    {
-        return view('pagalba');
-    }
-    public function redaguoti_profilipost(UserUpdate $request){
-        $user = Auth::user();
-        $user->name = $request['name'];
-        $user->username = $request['username'];
-        $user->email = $request['email'];
-        $user->save();
-        return back();
-    }
-    public function delete_user(){
-    $user = Auth::user();
-    $user-> delete();
-    return redirect('/');
-    }
 }

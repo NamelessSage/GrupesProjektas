@@ -20,8 +20,8 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-control-label">Name</label>
-                                            <input name="name" class="form-control" value="{{Auth::user()->name}}">
+                                            <label class="form-control-label">Vardas</label>
+                                            <input name="name" class="form-control" value="{{Auth::user()->vardas}}">
                                         </div>
                                     </div>
                                 </div>
@@ -30,7 +30,17 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-control-label">Username</label>
+                                            <label class="form-control-label">Pavardė</label>
+                                            <input name="lastname" class="form-control" value="{{Auth::user()->pavarde}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Prisijungimo vardas</label>
                                             <input name="username" class="form-control" value="{{Auth::user()->username}}">
                                         </div>
                                     </div>
@@ -40,8 +50,28 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-control-label">Email</label>
+                                            <label class="form-control-label">El.paštas</label>
                                             <input name ="email" class="form-control" value="{{Auth::user()->email}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Telefono numeris</label>
+                                            <input name ="phone" class="form-control" value="{{Auth::user()->telefono_nr}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Gimimo metai</label>
+                                            <input name ="date" class="form-control" value="{{Auth::user()->gimimo_metai}}">
                                         </div>
                                     </div>
                                 </div>
