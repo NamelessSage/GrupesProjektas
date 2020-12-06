@@ -2,6 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Http\Request;
+use App\Http\Requests\UserUpdate;
+use Illuminate\Support\Facades\Auth;
+
 
 class HomeController extends Controller
 {
@@ -10,10 +14,10 @@ class HomeController extends Controller
      *
      * @return void
      */
-//    public function __construct()
-//    {
-//        $this->middleware('auth');
-//    }
+    public function __construct()
+    {
+       $this->middleware('auth');
+    }
 
     /**
      * Show the application dashboard.
@@ -59,5 +63,18 @@ class HomeController extends Controller
     public function pagalba()
     {
         return view('pagalba');
+    }
+    public function redaguoti_profilipost(UserUpdate $request){
+        $user = Auth::user();
+        $user->name = $request['name'];
+        $user->username = $request['username'];
+        $user->email = $request['email'];
+        $user->save();
+        return back();
+    }
+    public function delete_user(){
+    $user = Auth::user();
+    $user-> delete();
+    return redirect('/');
     }
 }
