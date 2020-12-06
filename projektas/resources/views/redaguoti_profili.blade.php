@@ -21,7 +21,17 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-control-label">Name</label>
-                                            <input name="name" class="form-control" value="{{Auth::user()->name}}">
+                                            <input name="name" class="form-control" value="{{Auth::user()->vardas}}">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label class="form-control-label">Lastname</label>
+                                            <input name="lastname" class="form-control" value="{{Auth::user()->pavarde}}">
                                         </div>
                                     </div>
                                 </div>

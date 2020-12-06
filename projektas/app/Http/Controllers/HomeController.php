@@ -61,7 +61,8 @@ class HomeController extends Controller
     }
     public function redaguoti_profilipost(UserUpdate $request){
         $user = Auth::user();
-        $user->name = $request['name'];
+        $user->name = $request['vardas'];
+        $user->lastname = $request['pavarde'];
         $user->username = $request['username'];
         $user->email = $request['email'];
         $user->save();
