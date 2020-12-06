@@ -4,5 +4,6 @@
 *.xml
 projektas/.idea/workspace.xml
 
-projektas/.env
 .idea/GrupesProjektas.iml
+.idea/php.xml
+.idea/workspace.xml
