@@ -2,7 +2,6 @@
 <project version="4">
   <component name="PhpIncludePathManager">
     <include_path>
-
       <path value="$PROJECT_DIR$/projektas/vendor/myclabs/deep-copy" />
       <path value="$PROJECT_DIR$/projektas/vendor/phpunit/phpunit" />
       <path value="$PROJECT_DIR$/projektas/vendor/phpunit/php-code-coverage" />
@@ -109,7 +108,6 @@
       <path value="$PROJECT_DIR$/projektas/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/projektas/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/projektas/vendor/guzzlehttp/promises" />
-
     </include_path>
   </component>
   <component name="PhpProjectSharedConfiguration" php_language_level="7.3" />

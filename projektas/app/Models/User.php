@@ -9,6 +9,9 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class User extends Authenticatable
 {
+    use HasFactory, Notifiable;
+    use Notifiable,SoftDeletes;
+
     /**
      * The attributes that are mass assignable.
      *
@@ -16,7 +19,6 @@ class User extends Authenticatable
      */
     protected $dates = ['deleted_at'];
     protected $fillable = [
-
         'username',
         'vardas',
         'pavarde',
