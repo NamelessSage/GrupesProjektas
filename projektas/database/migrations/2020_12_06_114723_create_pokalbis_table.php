@@ -16,10 +16,10 @@ class CreatePokalbisTable extends Migration
         Schema::create('pokalbis', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('administratorius_id');
-            $table->foreign('administratorius_id')->references('id')->on('admins');
-//            $table->unsignedBigInteger('klientas_id');
-//            $table->foreign('klientas_id')->references('id')->on('klientas');
+            $table->unsignedBigInteger('klientas_id');
             $table->string('tema');
+            $table->foreign('administratorius_id')->references('id')->on('admins');
+            $table->foreign('klientas_id')->references('id')->on('klientas');
             $table->timestamps();
         });
     }
