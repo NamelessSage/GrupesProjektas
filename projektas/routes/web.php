@@ -32,6 +32,7 @@ Route::get('/pagalba', [App\Http\Controllers\HomeController::class, 'pagalba'])-
 Route::get('/redaguoti_profili', [App\Http\Controllers\HomeController::class, 'redaguoti_profili'])->name('redaguoti_profili');
 Route::post('/redaguoti_profili', [App\Http\Controllers\HomeController::class, 'redaguoti_profilipost'])->name('redaguoti_profilipost');
 Route::get('/atsiliepimai', [App\Http\Controllers\HomeController::class, 'atsiliepimai'])->name('atsiliepimai');
+Route::get('/delete_user', [App\Http\Controllers\HomeController::class, 'delete_user'])->name('delete_user');
 
 
 //administracine dalis
