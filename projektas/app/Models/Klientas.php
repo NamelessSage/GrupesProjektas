@@ -5,10 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Admin extends Model
+class Klientas extends Model
 {
-    protected $fillable=[
-        'asmens_kodas',
+    protected $fillable = [
         'user_id',
     ];
 }

@@ -3,7 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Klientas;
+use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
 {
@@ -22,10 +25,36 @@ class AdminController extends Controller
         return view('admin_klientai');
     }
 
+
     public function admin_prideti_klienta()
     {
         return view('admin_prideti_klienta');
     }
+
+    public function admin_prideti_klienta_post(Request $request)
+    {
+        $user = $this->createUser($request);
+        $klientas = Klientas::create([
+            'user_id' => $user->id,
+        ]);
+        return view('admin_prideti_klienta');
+    }
+
+    protected function createUser(Request $request)
+    {
+        return User::create([
+            'username' => $request->input('username'),
+            'vardas' => $request->input('vardas'),
+            'pavarde' => $request->input('pavarde'),
+            'email' => $request->input('email'),
+            'telefono_nr' => $request->input('telefonas'),
+            'gimimo_metai' => $request->input('metai'),
+            'role' => $request->input('role'),
+            'password' => Hash::make($request->input('password')),
+        ]);
+
+    }
+
 
     public function admin_klientas()
     {
