@@ -13,14 +13,12 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-
+//Route::get('/', [App\Http\Controllers\HomeController::class, 'index'])->name('kazkur');
 
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
 Route::get('/krepselis', [App\Http\Controllers\HomeController::class, 'krepselis'])->name('krepselis');
-Route::get('/administracinis', [App\Http\Controllers\HomeController::class, 'administracinis'])->name('administracinis');
 Route::get('/klientas', [App\Http\Controllers\HomeController::class, 'klientas'])->name('klientas');
 Route::get('/konstravimo', [App\Http\Controllers\HomeController::class, 'konstravimo'])->name('konstravimo');
 Route::get('/preke', [App\Http\Controllers\HomeController::class, 'apziura'])->name('preke');
