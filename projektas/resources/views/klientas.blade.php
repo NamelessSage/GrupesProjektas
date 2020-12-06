@@ -12,7 +12,7 @@
 
 
         <div><a class="btn btn-primary" href="{{route('redaguoti_profili')}}">Redaguoti profilį</a></div>
-        <div><a class="btn btn-danger" onclick="return confirm('Ar tikrai nori panaikinti savo profilį?'); " href="#">Pašalinti profilį</a></div>
+        <div><a class="btn btn-danger" onclick="return confirm('Ar tikrai nori panaikinti savo profilį?'); " href="{{route('delete_user')}}">Pašalinti profilį</a></div>
 {{--    <p><a href="{{route('atsiliepimai')}}">Parašyti atsiliepimą</a></p>--}}
 
     </div>

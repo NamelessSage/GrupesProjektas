@@ -110,4 +110,9 @@ class HomeController extends Controller
         $user->save();
         return back();
     }
+    public function delete_user(){
+    $user = Auth::user();
+    $user-> delete();
+    return redirect('/');
+    }
 }
