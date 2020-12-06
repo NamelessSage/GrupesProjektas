@@ -28,6 +28,8 @@ class UserUpdate extends FormRequest
             'lastname' => 'required|string',
             'username' =>'required|string',
             'email' =>'required|email',
+            'phone' =>'required|string',
+            'date' =>'required|date',
         ];
     }
 }

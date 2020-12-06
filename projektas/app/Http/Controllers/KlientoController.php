@@ -3,6 +3,10 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UserUpdate;
+use Illuminate\Support\Facades\Auth;
+
+
 
 class KlientoController extends Controller
 {
@@ -30,13 +34,16 @@ class KlientoController extends Controller
         }
 
         public function redaguoti_profilipost(UserUpdate $request){
+
             $user = Auth::user();
-            $user->name = $request['vardas'];
-            $user->lastname = $request['pavarde'];
+            $user->vardas = $request['name'];
+            $user->pavarde = $request['lastname'];
             $user->username = $request['username'];
             $user->email = $request['email'];
+            $user->telefono_nr = $request['phone'];
+            $user->gimimo_metai = $request['date'];
             $user->save();
-            return back();
+            return redirect('/klientas');;
         }
 
         public function delete_user(){
