@@ -20,7 +20,7 @@
                     @foreach($parts as $part)
 
                         <div class="card col-6 col-md-3" style="width: 18rem;">
-                            <img src="https://images-na.ssl-images-amazon.com/images/I/71nDX36Y9UL._AC_SL1026_.jpg" class="card-img-top" alt="...">
+                            <img src={{ $part->image }} class="card-img-top" alt="...">
                             <div class="card-body">
                                 <h5 class="card-title">{{ $part->name }}</h5>
                                 <p class="card-text">{{ $part->about }}</p>

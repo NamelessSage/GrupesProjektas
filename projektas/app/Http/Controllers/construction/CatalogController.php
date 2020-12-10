@@ -10,7 +10,6 @@ class CatalogController extends Controller
 {
     public function index(Request $request){
         $parts = Part::get();
-
         return view('construction.catalog', [
             'parts' => $parts,
         ]);
