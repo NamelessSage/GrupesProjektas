@@ -3,6 +3,7 @@
 @section('content')
     <div>
         <div>
+            <a class="mt-5" href="{{route('kompiuteris')}}">Mano Kompiuteris </a>
             <form action="{{ route('katalogas') }}" method="post">
                 @csrf
                 <div>
@@ -47,7 +48,7 @@
                 </form>
             </div>
 
-            <div class="px-5">
+            <div class="px-5 pb-5">
                 @if($parts->count())
                     @foreach($parts as $part)
                         <div class="d-flex p-1 bg-dark text-white">
@@ -57,7 +58,7 @@
                             <a class="px-3" href={{ $part->link }}>Apžiūrėti detalę</a>
                             <p class="px-3">Nuotrauka</p>
                             <p class="px-3">{{ $part->creator }}</p>
-                            <form action="" method="get">
+                            <form action="{{ route('addPart', $part->id) }}" method="get">
                                 @csrf
                                 <button type="submit">Įsidėti detalę</button>
                             </form>

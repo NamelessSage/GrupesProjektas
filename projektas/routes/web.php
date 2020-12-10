@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\construction\CatalogController;
+use App\Http\Controllers\construction\ComputerController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -54,3 +55,8 @@ Route::post('/katalogas', [CatalogController::class, 'store']);
 Route::get('/katalogas/sortByPrice', [CatalogController::class, 'sortByPrice'])->name('sortByPrice');
 Route::get('/katalogas/sortByName', [CatalogController::class, 'sortByName'])->name('sortByName');
 Route::get('/katalogas/sortByCreator', [CatalogController::class, 'sortByCreator'])->name('sortByCreator');
+
+Route::get('/katalogas/addPart/{id}', [CatalogController::class, 'addPart'])->name('addPart');
+
+Route::get('/kompiuteris', [ComputerController::class, 'index'])->name('kompiuteris');
+Route::get('/kompiuteris/deletePart/{id}', [ComputerController::class, 'deletePart'])->name('deletePart');

@@ -8,11 +8,11 @@ use Illuminate\Http\Request;
 
 class CatalogController extends Controller
 {
-    public function index(){
+    public function index(Request $request){
         $parts = Part::get();
 
         return view('construction.catalog', [
-            'parts' => $parts
+            'parts' => $parts,
         ]);
     }
 
@@ -70,5 +70,10 @@ class CatalogController extends Controller
         return view('construction.catalog', [
             'parts' => $parts
         ]);
+    }
+
+    public function addPart(Request $request, $id){
+        $request->session()->push('parts.id',$id);
+        return back();
     }
 }
