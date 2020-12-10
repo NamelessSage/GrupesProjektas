@@ -18,6 +18,10 @@
                             </form>
                         </div>
                     @endforeach
+                        <form action="" method="get">
+                            @csrf
+                            <button type="submit">Patvirtinti užsakymą</button>
+                        </form>
                 @else
                     <p>There are no parts currently.</p>
                 @endif

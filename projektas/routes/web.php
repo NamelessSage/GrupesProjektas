@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\construction\AddingController;
 use App\Http\Controllers\construction\CatalogController;
 use App\Http\Controllers\construction\ComputerController;
 use Illuminate\Support\Facades\Route;
@@ -50,7 +51,6 @@ Route::get('/administracinis/admin_pokalbio_langas', [App\Http\Controllers\Admin
 
 //construction
 Route::get('/katalogas', [CatalogController::class, 'index'])->name('katalogas');
-Route::post('/katalogas', [CatalogController::class, 'store']);
 
 Route::get('/katalogas/sortByPrice', [CatalogController::class, 'sortByPrice'])->name('sortByPrice');
 Route::get('/katalogas/sortByName', [CatalogController::class, 'sortByName'])->name('sortByName');
@@ -60,3 +60,6 @@ Route::get('/katalogas/addPart/{id}', [CatalogController::class, 'addPart'])->na
 
 Route::get('/kompiuteris', [ComputerController::class, 'index'])->name('kompiuteris');
 Route::get('/kompiuteris/deletePart/{id}', [ComputerController::class, 'deletePart'])->name('deletePart');
+
+Route::post('/pildymas', [AddingController::class, 'store']);
+Route::get('/pildymas', [AddingController::class, 'index'])->name('pildymas');

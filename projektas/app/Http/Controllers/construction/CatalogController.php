@@ -16,26 +16,6 @@ class CatalogController extends Controller
         ]);
     }
 
-    public function store(Request $request){
-        $this->validate($request, [
-            'name' => 'required|max:255',
-            'price' => 'required|max:255',
-            'about' => 'required|max:255',
-            'link' => 'required|max:255',
-            'creator' => 'required|max:255',
-        ]);
-
-        Part::create([
-            'name' => $request->name,
-            'price' => $request->price,
-            'about' => $request->about,
-            'link' => $request->link,
-            'creator' => $request->creator,
-        ]);
-
-        return back();
-    }
-
     public function sortByPrice(){
         $parts = Part::get();
 
