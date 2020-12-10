@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\construction\CatalogController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,3 +46,9 @@ Route::get('/administracinis/admin_redaguoti_klienta/{id}', [App\Http\Controller
 Route::get('/administracinis/admin_pagalbos_sarasas', [App\Http\Controllers\AdminController::class, 'admin_pagalbos_sarasas'])->name('admin_pagalbos_sarasas');
 Route::get('/administracinis/admin_pokalbio_langas', [App\Http\Controllers\AdminController::class, 'admin_pokalbio_langas'])->name('admin_pokalbio_langas');
 //});
+
+//construction
+Route::get('/katalogas', [CatalogController::class, 'index'])->name('katalogas');
+Route::post('/katalogas', [CatalogController::class, 'store']);
+
+Route::get('/katalogas/sortByPrice', [CatalogController::class, 'sortByPrice'])->name('sortByPrice');

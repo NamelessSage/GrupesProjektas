@@ -40,7 +40,7 @@
             </li>
 
             <li class="nav-item active">
-                <a class="nav-link" href="{{route('konstravimo')}}">Konstravimo <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{route('katalogas')}}">Katalogas<span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('pagalba')}}">Pagalba <span class="sr-only">(current)</span></a>
