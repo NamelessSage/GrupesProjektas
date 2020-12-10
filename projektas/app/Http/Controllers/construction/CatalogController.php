@@ -47,4 +47,28 @@ class CatalogController extends Controller
             'parts' => $parts
         ]);
     }
+
+    public function sortByName(){
+        $parts = Part::get();
+
+        $sorted = $parts->sortBy('name');
+        $sorted->values()->all();
+        $parts = $sorted;
+
+        return view('construction.catalog', [
+            'parts' => $parts
+        ]);
+    }
+
+    public function sortByCreator(){
+        $parts = Part::get();
+
+        $sorted = $parts->sortBy('creator');
+        $sorted->values()->all();
+        $parts = $sorted;
+
+        return view('construction.catalog', [
+            'parts' => $parts
+        ]);
+    }
 }

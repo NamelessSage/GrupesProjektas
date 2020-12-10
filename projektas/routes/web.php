@@ -52,3 +52,5 @@ Route::get('/katalogas', [CatalogController::class, 'index'])->name('katalogas')
 Route::post('/katalogas', [CatalogController::class, 'store']);
 
 Route::get('/katalogas/sortByPrice', [CatalogController::class, 'sortByPrice'])->name('sortByPrice');
+Route::get('/katalogas/sortByName', [CatalogController::class, 'sortByName'])->name('sortByName');
+Route::get('/katalogas/sortByCreator', [CatalogController::class, 'sortByCreator'])->name('sortByCreator');

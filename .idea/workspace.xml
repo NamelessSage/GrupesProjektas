@@ -3,9 +3,8 @@
   <component name="ChangeListManager">
     <list default="true" id="e06ce661-4384-49e6-90f4-96aff70517dd" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektas/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/app/Models/User.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektas/resources/views/konstravimo.blade.php" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektas/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektas/app/Http/Controllers/construction/CatalogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/app/Http/Controllers/construction/CatalogController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektas/resources/views/construction/catalog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/resources/views/construction/catalog.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projektas/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -178,7 +177,7 @@
       <workItem from="1607097522640" duration="4000" />
       <workItem from="1607169904668" duration="1242000" />
       <workItem from="1607246625417" duration="3834000" />
-      <workItem from="1607587031883" duration="9393000" />
+      <workItem from="1607587031883" duration="10183000" />
     </task>
     <servers />
   </component>

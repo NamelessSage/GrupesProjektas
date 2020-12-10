@@ -31,15 +31,23 @@
                 </div>
             </form>
 
-            <div>
+            <div class="m-5 d-flex p-1 bg-dark text-white justify-content-center">
                 Rikiuoti pagal:
-                <form action="" method="post">
+                <form action="{{ route('sortByPrice') }}" method="get">
                     @csrf
-                    <button type="submit">Kaina</button>
+                    <button type="submit">Kainą</button>
+                </form>
+                <form action="{{ route('sortByName') }}" method="get">
+                    @csrf
+                    <button type="submit">Pavadinimą</button>
+                </form>
+                <form action="{{ route('sortByCreator') }}" method="get">
+                    @csrf
+                    <button type="submit">Gamintoją</button>
                 </form>
             </div>
 
-            <div class="p-5">
+            <div class="px-5">
                 @if($parts->count())
                     @foreach($parts as $part)
                         <div class="d-flex p-1 bg-dark text-white">
@@ -49,7 +57,7 @@
                             <a class="px-3" href={{ $part->link }}>Apžiūrėti detalę</a>
                             <p class="px-3">Nuotrauka</p>
                             <p class="px-3">{{ $part->creator }}</p>
-                            <form action="{{ route('sortByPrice') }}" method="get">
+                            <form action="" method="get">
                                 @csrf
                                 <button type="submit">Įsidėti detalę</button>
                             </form>
