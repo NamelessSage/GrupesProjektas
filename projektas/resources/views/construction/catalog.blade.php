@@ -15,28 +15,32 @@
                 </select>
             </div>
 
-            <div class="px-5 pb-5">
+            <div class="row p-5">
                 @if($parts->count())
                     @foreach($parts as $part)
-                        <div class="d-flex p-1 bg-dark text-white">
-                            <p class="px-3 ">{{ $part->name }}</p>
-                            <p class="px-3">{{ $part->price }}</p>
-                            <p class="px-3">{{ $part->about }}</p>
-                            <a class="px-3" href={{ $part->link }}>Apžiūrėti detalę</a>
-                            <p class="px-3">{{ $part->image }}</p>
-                            <p class="px-3">{{ $part->category }}</p>
-                            <p class="px-3">{{ $part->creator }}</p>
-                            <form action="{{ route('addPart', $part->id) }}" method="get">
-                                @csrf
-                                <button type="submit">Įsidėti detalę</button>
-                            </form>
+
+                        <div class="card col-6 col-md-3" style="width: 18rem;">
+                            <img src="https://images-na.ssl-images-amazon.com/images/I/71nDX36Y9UL._AC_SL1026_.jpg" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-title">{{ $part->name }}</h5>
+                                <p class="card-text">{{ $part->about }}</p>
+                            </div>
+                            <ul class="list-group list-group-flush">
+                                <li class="list-group-item">{{ $part->price }} eur.</li>
+                                <li class="list-group-item">{{ $part->creator }}</li>
+                                <li class="list-group-item">{{ $part->category }}</li>
+                            </ul>
+                            <div class="card-body">
+                                <a href="{{ $part->link }}" class="card-link">Apžiurėti</a>
+                                <a href="{{ route('addPart', $part->id) }}" class="card-link">Pridėti</a>
+                            </div>
                         </div>
+
                     @endforeach
                 @else
-                    <p>There are no parts currently.</p>
+                    <p>Dabar nėra detalių.</p>
                 @endif
             </div>
-
         </div>
     </div>
 @endsection

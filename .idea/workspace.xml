@@ -2,13 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e06ce661-4384-49e6-90f4-96aff70517dd" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/GrupesProjektas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GrupesProjektas.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektas/app/Http/Controllers/construction/AddingController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/app/Http/Controllers/construction/AddingController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektas/app/Models/Part.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/app/Models/Part.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektas/database/migrations/2020_12_10_085045_create_parts_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/database/migrations/2020_12_10_085045_create_parts_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektas/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektas/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/composer.lock" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projektas/resources/views/construction/catalog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/resources/views/construction/catalog.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projektas/resources/views/construction/kompiuteris.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/resources/views/construction/kompiuteris.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektas/resources/views/construction/pildymas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/resources/views/construction/pildymas.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -137,6 +137,10 @@
       <path value="$PROJECT_DIR$/projektas/vendor/guzzlehttp/psr7" />
       <path value="$PROJECT_DIR$/projektas/vendor/ralouphie/getallheaders" />
       <path value="$PROJECT_DIR$/projektas/vendor/guzzlehttp/promises" />
+      <path value="$PROJECT_DIR$/projektas/vendor/fabpot/goutte" />
+      <path value="$PROJECT_DIR$/projektas/vendor/symfony/browser-kit" />
+      <path value="$PROJECT_DIR$/projektas/vendor/symfony/dom-crawler" />
+      <path value="$PROJECT_DIR$/projektas/vendor/symfony/http-client" />
     </include_path>
   </component>
   <component name="ProjectId" id="1k0UfOJVTOBbDkd5pefSo1IQjqM" />
@@ -180,7 +184,7 @@
       <workItem from="1607097522640" duration="4000" />
       <workItem from="1607169904668" duration="1242000" />
       <workItem from="1607246625417" duration="3834000" />
-      <workItem from="1607587031883" duration="24285000" />
+      <workItem from="1607587031883" duration="28907000" />
     </task>
     <servers />
   </component>
