@@ -3,23 +3,16 @@
 @section('content')
     <div>
         <div>
-            <a class="mt-5" href="{{route('kompiuteris')}}">Mano Kompiuteris </a>
-            <a class="mt-5" href="{{route('pildymas')}}">Detalių pildymas - Admin </a>
+            <div class="">
+                <a class="mt-5" href="{{route('kompiuteris')}}">Mano Kompiuteris </a>
+                <a class="mt-5" href="{{route('pildymas')}}">Detalių pildymas - Admin </a>
 
-            <div class="m-5 d-flex p-1 bg-dark text-white justify-content-center">
-                Rikiuoti pagal:
-                <form action="{{ route('sortByPrice') }}" method="get">
-                    @csrf
-                    <button type="submit">Kainą</button>
-                </form>
-                <form action="{{ route('sortByName') }}" method="get">
-                    @csrf
-                    <button type="submit">Pavadinimą</button>
-                </form>
-                <form action="{{ route('sortByCreator') }}" method="get">
-                    @csrf
-                    <button type="submit">Gamintoją</button>
-                </form>
+                <select name="cars" onchange="location = this.value;">
+                    <option>Rikiuoti pagal</option>
+                    <option value="{{ route('sortByPrice') }}">Pagal kainą.</option>
+                    <option value="{{ route('sortByName') }}">Pagal pavadinimą.</option>
+                    <option value="{{ route('sortByCreator') }}">Pagal gamintoją.</option>
+                </select>
             </div>
 
             <div class="px-5 pb-5">
