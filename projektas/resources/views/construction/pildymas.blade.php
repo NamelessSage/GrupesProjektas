@@ -4,6 +4,7 @@
         <div>
             <form action="{{ route('pildymas') }}" method="post">
                 @csrf
+                //
                 <div>
                     <label for="name">Pavadinimas</label>
                     <input type="text" name="name" id="name" placeholder="Detalės pavadinimas.."></input>
