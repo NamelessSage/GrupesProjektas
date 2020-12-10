@@ -17,8 +17,10 @@ class CreatePartsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('price');
+            $table->string('category');
             $table->string('about');
             $table->string('link');
+            $table->string('image');
             $table->string('creator');
             $table->timestamps();
         });

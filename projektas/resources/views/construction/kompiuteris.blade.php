@@ -10,7 +10,8 @@
                             <p class="px-3">{{ $part->price }}</p>
                             <p class="px-3">{{ $part->about }}</p>
                             <a class="px-3" href={{ $part->link }}>Apžiūrėti detalę</a>
-                            <p class="px-3">Nuotrauka</p>
+                            <p class="px-3">{{ $part->image }}</p>
+                            <p class="px-3">{{ $part->category }}</p>
                             <p class="px-3">{{ $part->creator }}</p>
                             <form action="{{ route('deletePart', $part->id) }}" method="get">
                                 @csrf

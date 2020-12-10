@@ -19,6 +19,8 @@ class AddingController extends Controller
             'price' => 'required|max:255',
             'about' => 'required|max:255',
             'link' => 'required|max:255',
+            'image' => 'required|max:255',
+            'category' => 'required|max:255',
             'creator' => 'required|max:255',
         ]);
 
@@ -27,6 +29,8 @@ class AddingController extends Controller
             'price' => $request->price,
             'about' => $request->about,
             'link' => $request->link,
+            'image' => $request->image,
+            'category' => $request->category,
             'creator' => $request->creator,
         ]);
 

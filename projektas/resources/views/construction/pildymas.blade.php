@@ -20,6 +20,17 @@
                     <label for="link">Nuoroda</label>
                     <input type="text" name="link" id="link" placeholder="Detalės nuoroda.."></input>
                 </div>
+
+                <div>
+                    <label for="image">Nuotrauka</label>
+                    <input type="text" name="image" id="image" placeholder="Detalės nuotrauka.."></input>
+                </div>
+
+                <div>
+                    <label for="category">Kategorija</label>
+                    <input type="text" name="category" id="category" placeholder="Detalės kategorija.."></input>
+                </div>
+
                 <div>
                     <label for="creator">Gamintojas</label>
                     <input type="text" name="creator" id="creator" placeholder="Detalės gamintojas.."></input>

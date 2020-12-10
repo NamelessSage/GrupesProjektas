@@ -14,6 +14,8 @@ class Part extends Model
         'price',
         'about',
         'link',
+        'image',
+        'category',
         'creator',
     ];
 }
