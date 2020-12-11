@@ -1,8 +1,11 @@
 <?php
 
+use App\Http\Controllers\CartPartController;
 use App\Http\Controllers\construction\AddingController;
 use App\Http\Controllers\construction\CatalogController;
 use App\Http\Controllers\construction\ComputerController;
+use App\Http\Controllers\CartController;
+use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -63,3 +66,9 @@ Route::get('/kompiuteris/deletePart/{id}', [ComputerController::class, 'deletePa
 
 Route::post('/pildymas', [AddingController::class, 'store']);
 Route::get('/pildymas', [AddingController::class, 'index'])->name('pildymas');
+
+//cart
+Route::get('/addToCart', [CartController::class, 'addToCart'])->name('addToCart');
+Route::get('cart', [CartController::class, 'index'])->name('cart');
+Route::get('delete-cart-part/{id}', [CartPartController::class, 'destroy'])->name('destroyCartPart');
+Route::get('make-order/{cart}', [OrderController::class, 'create'])->name('makeOrder');

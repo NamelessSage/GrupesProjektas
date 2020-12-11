@@ -59,4 +59,24 @@ class User extends Authenticatable
     public function isKlientas() {
         return $this->role == 'klientas';
     }
+    public function carts()
+    {
+        return $this->hasMany(Cart::class, 'user_id');
+    }
+    public function orders()
+    {
+        return $this->hasMany(Order::class, 'user_id');
+    }
+    public function assignCart()
+    {
+        $carts = $this->carts;
+        $cart = $carts->where('paid', '=', '0')->first();
+        if(is_null($cart)) {
+            $cart = Cart::create([
+                'user_id' => $this->id
+            ]);
+        }
+
+        return $cart;
+    }
 }

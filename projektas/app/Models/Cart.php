@@ -17,6 +17,10 @@ class Cart extends Model
 
     public function cart_parts()
     {
-        return $this->hasMany(PartItem::class);
+        return $this->hasMany(CartPart::class, 'cart_id', 'id');
+    }
+    public function getTotalPrice()
+    {
+        return $this->cart_parts->sum('total_price');
     }
 }
