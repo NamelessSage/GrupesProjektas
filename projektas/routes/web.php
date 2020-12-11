@@ -5,6 +5,7 @@ use App\Http\Controllers\construction\AddingController;
 use App\Http\Controllers\construction\CatalogController;
 use App\Http\Controllers\construction\ComputerController;
 use App\Http\Controllers\CartController;
+use App\Http\Controllers\DiscountController;
 use App\Http\Controllers\OrderController;
 use Illuminate\Support\Facades\Route;
 
@@ -72,3 +73,4 @@ Route::get('/addToCart', [CartController::class, 'addToCart'])->name('addToCart'
 Route::get('cart', [CartController::class, 'index'])->name('cart');
 Route::get('delete-cart-part/{id}', [CartPartController::class, 'destroy'])->name('destroyCartPart');
 Route::get('make-order/{cart}', [OrderController::class, 'create'])->name('makeOrder');
+Route::get('discount', [DiscountController::class, 'create'])->name('createDiscount');

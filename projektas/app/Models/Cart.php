@@ -13,6 +13,7 @@ class Cart extends Model
         'user_id',
         'price',
         'quantity',
+        'discount',
     ] ;
 
     public function cart_parts()
@@ -22,5 +23,8 @@ class Cart extends Model
     public function getTotalPrice()
     {
         return $this->cart_parts->sum('total_price');
+    }
+    public function discount(){
+        return $this->hasOne(Discount::class);
     }
 }

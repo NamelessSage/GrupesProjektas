@@ -11,11 +11,14 @@ class OrderController extends Controller
 {
     public function create($id){
         $cart=Cart::find($id);
-        $cart->paid = true;
-        Order::create([
-            'cart_id' => $cart->id
-        ]);
-        $cart->save();
+        if(!is_null($cart->cart_parts->first())){
+            $cart->paid = true;
+            Order::create([
+                'cart_id' => $cart->id
+            ]);
+            $cart->save();
+        }
+
         return back();
     }
 }

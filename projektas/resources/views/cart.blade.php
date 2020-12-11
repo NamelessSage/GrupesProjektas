@@ -30,11 +30,16 @@
 
                 @endforeach
 
+        <form action="" method="post">
+            <label for="discount">Įveskite nuolaidos kodą</label>
+            <input type="text" name="discount" id="">
+            <button type="submit">Patvirtinti</button>
+        </form>
 
         <div class="check-out">
 
             <div class="total-price">
-                <h4>Total price: <b>{{ $cart->getTotalPrice() }}</b></h4>
+                <h4>Total price: <b>{{ $cart->getTotalPrice()}}</b></h4>
             </div>
 
             <div class="buy-btn">

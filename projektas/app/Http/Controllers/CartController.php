@@ -28,5 +28,6 @@ class CartController extends Controller
                 'total_price' => $part->price
             ]);
         }
+        return back();
     }
 }
