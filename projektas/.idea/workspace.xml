@@ -19,18 +19,14 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="a982e707-7335-44c2-a077-78361b896764" name="Default Changelist" comment="Initial">
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_klientai.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_klientas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_pagalbu_sarasas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_pokalbio_langas.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_prideti_klienta.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_redaguoti_klienta.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/admin_uzsak_saras.blade.php" afterDir="false" />
+    <list default="true" id="a982e707-7335-44c2-a077-78361b896764" name="Default Changelist" comment="fixes">
+      <change beforePath="$PROJECT_DIR$/../.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.env" beforeDir="false" afterPath="$PROJECT_DIR$/.env" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/administracinis.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/administracinis.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/konstravimo.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/konstravimo.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/User.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/User.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2014_10_12_000000_create_users_table.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -198,6 +194,8 @@
       <updated>1604589768574</updated>
       <workItem from="1604589769797" duration="454000" />
       <workItem from="1604834307600" duration="5732000" />
+      <workItem from="1604859424358" duration="632000" />
+      <workItem from="1607254138622" duration="2793000" />
     </task>
     <task id="LOCAL-00001" summary="Initial">
       <created>1604836414989</created>
@@ -206,7 +204,14 @@
       <option name="project" value="LOCAL" />
       <updated>1604836414989</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="fixes">
+      <created>1604841233896</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1604841233896</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -226,12 +231,17 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="Initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial" />
+    <MESSAGE value="fixes" />
+    <option name="LAST_COMMIT_MESSAGE" value="fixes" />
   </component>
   <component name="WindowStateProjectService">
     <state x="705" y="309" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1604838195093">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="705" y="309" key="#com.intellij.fileTypes.FileTypeChooser/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1604838195093" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607256219893">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1920.1040@0.0.1920.1040" timestamp="1607256219893" />
   </component>
 </project>
