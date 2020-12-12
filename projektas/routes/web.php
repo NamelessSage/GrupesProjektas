@@ -45,6 +45,10 @@ Route::get('/administracinis/naujas_klientas', [App\Http\Controllers\AdminContro
 Route::post('/administracinis/naujas_klientas', [App\Http\Controllers\AdminController::class, 'admin_prideti_klienta_post'])->name('admin_naujas_klientas_post');
 Route::get('/administracinis/admin_klientas_perziura/{id}', [App\Http\Controllers\AdminController::class, 'admin_klientas'])->name('admin_klientas');
 Route::get('/administracinis/admin_redaguoti_klienta/{id}', [App\Http\Controllers\AdminController::class, 'admin_redaguoti_klienta'])->name('admin_redaguoti_klienta');
+Route::post('/administracinis/admin_redaguoti_klienta/{id}', [App\Http\Controllers\AdminController::class, 'admin_redaguoti_klienta_post'])->name('admin_redaguoti_klienta_post');
+
+Route::get('/administracinis/pasalinti_klienta/{id}', [App\Http\Controllers\AdminController::class, 'admin_salinti_klienta'])->name('admin_salinti_klienta');
+
 Route::get('/administracinis/admin_pagalbos_sarasas', [App\Http\Controllers\AdminController::class, 'admin_pagalbos_sarasas'])->name('admin_pagalbos_sarasas');
 Route::get('/administracinis/admin_pokalbio_langas', [App\Http\Controllers\AdminController::class, 'admin_pokalbio_langas'])->name('admin_pokalbio_langas');
 //});
