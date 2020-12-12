@@ -9,6 +9,7 @@ use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Mail;
+use App\Models\Klientas;
 
 class RegisterController extends Controller
 {
@@ -67,7 +68,6 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-
          $email_data = array(
                 'name' => $data['name'],
                 'email' => $data['email'],
@@ -77,7 +77,7 @@ class RegisterController extends Controller
                     ->subject('Welcome to Komapi')
                     ->from('kompai@kompai.com', 'Kompai');
             });
-        return User::create([
+       $tarp = User::create([
             'vardas' => $data['name'],
             'pavarde' => $data['lastname'],
             'username' => $data['username'],
@@ -85,5 +85,12 @@ class RegisterController extends Controller
             'role' => $data['role'],
             'password' => Hash::make($data['password']),
         ]);
+
+        Klientas::create([
+                    'user_id' => $tarp->id,
+                ]);
+
+        return $tarp;
+
     }
 }

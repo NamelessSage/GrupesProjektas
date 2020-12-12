@@ -57,7 +57,7 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-control-label">Gimimo metai</label>
-                                            <input name ="date" class="form-control" value="{{Auth::user()->gimimo_metai}}">
+                                            <input name ="date" type = "date" class="form-control" value="{{Auth::user()->gimimo_metai}}">
                                         </div>
                                     </div>
                                 </div>
