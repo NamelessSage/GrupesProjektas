@@ -13,8 +13,8 @@ class Order extends Model
         'status',
     ] ;
 
-    public function orders()
+    public function carts()
     {
-        return $this->hasMany(Cart::class);
+        return $this->hasOne(Cart::class, 'id', 'cart_id');
     }
 }
