@@ -24,6 +24,13 @@
                         </div>
 
                     @endforeach
+{{--                        <form method="get" action="{{ route('addToCart', $values) }}">--}}
+{{--                            @csrf--}}
+{{--                            <input type="hidden" name="values" value="{{ $values}}">--}}
+{{--                            <button type="submit" name="button" class="btn btn-orange">Add to cart</button>--}}
+{{--                        </form>--}}
+                        <a href="{{ route('addToCart') }}" class="card-link">adina</a>
+{{--                        <a href="{{ route('cart.add, $values') }}"><button  type="button" name="button" class="btn btn-orange">Add to cart</button></a>--}}
                 @else
                     <p>Dabar nėra detalių.</p>
                 @endif
