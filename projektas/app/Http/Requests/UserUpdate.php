@@ -26,7 +26,6 @@ class UserUpdate extends FormRequest
         return [
             'name' =>'required|string',
             'lastname' => 'required|string',
-            'username' =>'required|string',
             'email' =>'required|email',
             'phone' =>'required|string',
             'date' =>'required|date',
