@@ -71,6 +71,7 @@ class RegisterController extends Controller
             'pavarde' => $data['lastname'],
             'username' => $data['username'],
             'email' => $data['email'],
+            'role' => $data['role'],
             'password' => Hash::make($data['password']),
         ]);
     }

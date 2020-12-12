@@ -38,6 +38,7 @@ Route::post('/redaguoti_profili', [App\Http\Controllers\KlientoController::class
 Route::get('/atsiliepimai', [App\Http\Controllers\KlientoController::class, 'atsiliepimai'])->name('atsiliepimai');
 Route::get('/delete_user', [App\Http\Controllers\KlientoController::class, 'delete_user'])->name('delete_user');
 Route::get('/pagalba', [App\Http\Controllers\KlientoController::class, 'pagalba'])->name('pagalba');
+Route::post('/add',[App\Http\Controllers\KlientoController::class, 'add']);
 
 
 //administracine dalis
