@@ -3,8 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Cart;
 use App\Models\Klientas;
+use App\Models\Order;
+use App\Models\Pokalbis;
 use App\Models\User;
+use App\Models\Zinutes;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
@@ -83,7 +87,25 @@ class AdminController extends Controller
 
     public function admin_uzsakymai()
     {
-        return view('admin_uzsak_saras');
+        $uzsakymai = Order::where('status', '1')->get();
+        return view('admin_uzsak_saras', ['uzsakymai'=>$uzsakymai]);
+    }
+
+    public function admin_uzsakymai_patvirtinti($id)
+    {
+        $uzsakymas = Order::find($id);
+        $uzsakymas->status = 2;
+        $uzsakymas->save();
+        return redirect(route('admin_uzsakymai'));
+    }
+
+    public function admin_uzsakymai_atmesti($id)
+    {
+        $uzsakymas = Order::find($id);
+        $uzsakymas->status = 3;
+        $uzsakymas->save();
+
+        return redirect(route('admin_uzsakymai'));
     }
 
 
@@ -91,13 +113,35 @@ class AdminController extends Controller
 
     public function admin_pagalbos_sarasas()
     {
-        $admin = Auth::id();
-        dd($admin);
-        return view('admin_pagalbu_sarasas');
+        $pokalbiai = Pokalbis::orderBy('created_at', 'desc')->get();
+        $admin = Auth::user()->admin->id;
+        return view('admin_pagalbu_sarasas', ['admin_id'=>$admin, 'pokalbiai'=>$pokalbiai]);
     }
 
-    public function admin_pokalbio_langas()
+
+    public function admin_pokalbio_langas($id)
     {
-        return view('admin_pokalbio_langas');
+        $zinutes = Zinutes::where('pokalbio_id', $id)->orderBy('created_at', 'desc')->get();
+        return view('admin_pokalbio_langas', ['zinutes'=>$zinutes, 'pokalbis'=>$id]);
     }
+
+    public function siusti_zinute($id, Request $request)
+    {
+        $pokalbis = Pokalbis::find($id);
+        if ($pokalbis->	administratorius_id == null){
+            $pokalbis->	administratorius_id = Auth::user()->admin->id;
+            $pokalbis->save();
+        }
+
+        $siuntejas = Auth::user()->username;
+        Zinutes::create([
+            'pokalbio_id' => $id,
+            'tekstas' => $request->input('zinute'),
+            'siuntejas' => $siuntejas,
+        ]);
+
+        $zinutes = Zinutes::where('pokalbio_id', $id)->orderBy('created_at', 'desc')->get();
+        return view('admin_pokalbio_langas', ['zinutes'=>$zinutes, 'pokalbis'=>$id]);
+    }
+
 }
