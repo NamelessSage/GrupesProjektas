@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Models\Admin;
+use App\Models\Cart;
 use App\Models\Klientas;
+use App\Models\Order;
 use App\Models\User;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
@@ -83,7 +85,25 @@ class AdminController extends Controller
 
     public function admin_uzsakymai()
     {
-        return view('admin_uzsak_saras');
+        $uzsakymai = Order::where('status', '1')->get();
+        return view('admin_uzsak_saras', ['uzsakymai'=>$uzsakymai]);
+    }
+
+    public function admin_uzsakymai_patvirtinti($id)
+    {
+        $uzsakymas = Order::find($id);
+        $uzsakymas->status = 2;
+        $uzsakymas->save();
+        return redirect(route('admin_uzsakymai'));
+    }
+
+    public function admin_uzsakymai_atmesti($id)
+    {
+        $uzsakymas = Order::find($id);
+        $uzsakymas->status = 3;
+        $uzsakymas->save();
+
+        return redirect(route('admin_uzsakymai'));
     }
 
 
@@ -92,7 +112,6 @@ class AdminController extends Controller
     public function admin_pagalbos_sarasas()
     {
         $admin = Auth::id();
-        dd($admin);
         return view('admin_pagalbu_sarasas');
     }
 
