@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\UserUpdate;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\DB;
 
 
 
@@ -25,7 +26,10 @@ class KlientoController extends Controller
 
         public function atsiliepimai()
         {
-            return view('atsiliepimai');
+            $data = array(
+                        'list' => DB::table('atsiliepimai')->orderBy('created_at', 'desc')->get()
+                    );
+            return view('atsiliepimai',$data);
         }
 
         public function pagalba()
@@ -51,4 +55,18 @@ class KlientoController extends Controller
             $user-> delete();
             return redirect('/');
         }
+
+        function add(Request $request){
+         $request->validate([
+                'tekstas' => 'required'
+
+            ]);
+            $query = DB::table('atsiliepimai')->insert([
+                'tekstas' => $request -> input('tekstas'),
+                'user' => Auth::user()->username,
+                'created_at' => date("Y-m-d h:i:s")
+            ]);
+            return back();
+         }
+
 }
