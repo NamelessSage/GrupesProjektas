@@ -33,7 +33,7 @@
                 <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{route('krepselis')}}">Krepselis <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{route('cart')}}">Krepselis <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('administracinis')}}">Administracinis <span class="sr-only">(current)</span></a>
