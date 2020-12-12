@@ -43,7 +43,7 @@ class KlientoController extends Controller
             $user->telefono_nr = $request['phone'];
             $user->gimimo_metai = $request['date'];
             $user->save();
-            return redirect('/klientas');;
+            return redirect('/klientas');
         }
 
         public function delete_user(){

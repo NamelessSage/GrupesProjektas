@@ -6,6 +6,7 @@ use App\Models\Admin;
 use App\Models\Klientas;
 use App\Models\User;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Hash;
 
 class AdminController extends Controller
@@ -15,16 +16,11 @@ class AdminController extends Controller
         return view('administracinis');
     }
 
-    public function admin_uzsakymai()
-    {
-        return view('admin_uzsak_saras');
-    }
-
     public function admin_klientai()
     {
-        return view('admin_klientai');
+        $klientai = User::where('role', 'klientas')->where('deleted_at', null)->get();
+        return view('admin_klientai', ['klientai'=>$klientai]);
     }
-
 
     public function admin_prideti_klienta()
     {
@@ -37,7 +33,7 @@ class AdminController extends Controller
         $klientas = Klientas::create([
             'user_id' => $user->id,
         ]);
-        return view('admin_prideti_klienta');
+        return redirect(route('admin_klientas', $klientas->user_id));
     }
 
     protected function createUser(Request $request)
@@ -55,19 +51,48 @@ class AdminController extends Controller
 
     }
 
-
-    public function admin_klientas()
+    public function admin_klientas($id)
     {
-        return view('admin_klientas');
+        $klientas = User::find($id);
+        return view('admin_klientas', ['klientas'=>$klientas]);
     }
 
-    public function admin_redaguoti_klienta()
+    public function admin_redaguoti_klienta($id)
     {
-        return view('admin_redaguoti_klienta');
+        $klientas = User::find($id);
+        return view('admin_redaguoti_klienta', ['id'=>$id, 'klientas'=>$klientas]);
     }
+
+    public function admin_redaguoti_klienta_post($id, Request $request)
+    {
+        $klientas = User::find($id);
+        $klientas->vardas = $request->input('vardas');
+        $klientas->pavarde = $request->input('pavarde');
+        $klientas->save();
+        return redirect(route('admin_klientas', $id));
+    }
+
+    public function admin_salinti_klienta($id)
+    {
+        $klientas = User::find($id);
+        $klientas->delete();
+        return redirect(route('admin_klientai'));
+    }
+
+
+
+    public function admin_uzsakymai()
+    {
+        return view('admin_uzsak_saras');
+    }
+
+
+
 
     public function admin_pagalbos_sarasas()
     {
+        $admin = Auth::id();
+        dd($admin);
         return view('admin_pagalbu_sarasas');
     }
 
