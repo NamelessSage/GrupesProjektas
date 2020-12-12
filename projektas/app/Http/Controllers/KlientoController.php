@@ -38,16 +38,14 @@ class KlientoController extends Controller
         }
 
         public function redaguoti_profilipost(UserUpdate $request){
-
             $user = Auth::user();
             $user->vardas = $request['name'];
             $user->pavarde = $request['lastname'];
-            $user->username = $request['username'];
             $user->email = $request['email'];
             $user->telefono_nr = $request['phone'];
             $user->gimimo_metai = $request['date'];
             $user->save();
-            return redirect('/klientas');;
+            return redirect('/klientas');
         }
 
         public function delete_user(){
