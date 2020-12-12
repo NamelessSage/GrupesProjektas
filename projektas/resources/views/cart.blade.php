@@ -12,13 +12,20 @@
                 <tr>
                     <td><img src="{{ $cart_part->part->image }}" alt="{{ $cart_part->image }}"></td>
                     <td><h3>{{ $cart_part->part->name }}</h3></td>
-                    <td><input type="number" wire:model="item_qty" wire:change="updateCart({{ $cart_part }})" value="{{ $cart_part->quantity }}" ></td>
+                    <form method="post" action="{{ route('changeQuantity', $cart_part)}}">
+                        @csrf
+                        <td>
+                            <input type="number" name="qty" value="{{ $cart_part->quantity }}" min="0" >
+                            <button type="submit" class="btn btn-primary">Save</button>
+                        </td>
+
+                    </form>
                     <td><h4>{{ $cart_part->total_price }}€</h4></td>
                     <td>
                         <form class="" action="{{ route('destroyCartPart', $cart_part->id) }}" method="get">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn"><i class="fas fa-trash-alt"></i></button>
+                            <button type="submit" class="btn"><i class="fas fa-trash-alt"></i>Delete</button>
                         </form>
                     </td>
                 </tr>

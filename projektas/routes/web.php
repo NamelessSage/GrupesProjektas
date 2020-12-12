@@ -74,3 +74,4 @@ Route::get('cart', [CartController::class, 'index'])->name('cart');
 Route::get('delete-cart-part/{id}', [CartPartController::class, 'destroy'])->name('destroyCartPart');
 Route::get('make-order/{cart}', [OrderController::class, 'create'])->name('makeOrder');
 Route::get('discount/{cart}', [CartController::class, 'addDiscount'])->name('createDiscount');
+Route::post('changeQuantity/{cartPart}', [CartPartController::class, 'changeQuantity'])->name('changeQuantity');
