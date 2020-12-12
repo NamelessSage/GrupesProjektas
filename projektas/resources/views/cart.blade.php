@@ -30,7 +30,7 @@
 
                 @endforeach
 
-        <form action="" method="post">
+        <form action="{{ route('createDiscount', $cart) }}" method="get">
             <label for="discount">Įveskite nuolaidos kodą</label>
             <input type="text" name="discount" id="">
             <button type="submit">Patvirtinti</button>

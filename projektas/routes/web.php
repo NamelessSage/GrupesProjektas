@@ -73,4 +73,4 @@ Route::get('/addToCart', [CartController::class, 'addToCart'])->name('addToCart'
 Route::get('cart', [CartController::class, 'index'])->name('cart');
 Route::get('delete-cart-part/{id}', [CartPartController::class, 'destroy'])->name('destroyCartPart');
 Route::get('make-order/{cart}', [OrderController::class, 'create'])->name('makeOrder');
-Route::get('discount', [DiscountController::class, 'create'])->name('createDiscount');
+Route::get('discount/{cart}', [CartController::class, 'addDiscount'])->name('createDiscount');
