@@ -15,7 +15,7 @@ class CreatePokalbisTable extends Migration
     {
         Schema::create('pokalbis', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('administratorius_id');
+            $table->unsignedBigInteger('administratorius_id')->nullable();
             $table->unsignedBigInteger('klientas_id');
             $table->string('tema');
             $table->foreign('administratorius_id')->references('id')->on('admins');

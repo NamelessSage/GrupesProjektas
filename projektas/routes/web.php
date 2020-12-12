@@ -56,7 +56,8 @@ Route::get('/administracinis/admin_redaguoti_klienta/{id}', [App\Http\Controller
 Route::post('/administracinis/admin_redaguoti_klienta/{id}', [App\Http\Controllers\AdminController::class, 'admin_redaguoti_klienta_post'])->name('admin_redaguoti_klienta_post');
 Route::get('/administracinis/pasalinti_klienta/{id}', [App\Http\Controllers\AdminController::class, 'admin_salinti_klienta'])->name('admin_salinti_klienta');
 Route::get('/administracinis/admin_pagalbos_sarasas', [App\Http\Controllers\AdminController::class, 'admin_pagalbos_sarasas'])->name('admin_pagalbos_sarasas');
-Route::get('/administracinis/admin_pokalbio_langas', [App\Http\Controllers\AdminController::class, 'admin_pokalbio_langas'])->name('admin_pokalbio_langas');
+Route::get('/administracinis/admin_pokalbio_langas/{id}', [App\Http\Controllers\AdminController::class, 'admin_pokalbio_langas'])->name('admin_pokalbio_langas');
+Route::post('/administracinis/admin_siusti_zinute/{id}', [App\Http\Controllers\AdminController::class, 'siusti_zinute'])->name('siusti_zinute');
 //});
 
 //construction

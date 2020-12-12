@@ -12,4 +12,9 @@ class Pokalbis extends Model
         'klientas_id',
         'tema',
     ];
+
+    public function klientas()
+    {
+        return $this->hasOne(Klientas::class,'id', 'klientas_id');
+    }
 }
