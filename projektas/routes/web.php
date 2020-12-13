@@ -45,13 +45,11 @@ Route::get('pokalbio_langas/{id}', [App\Http\Controllers\KlientoController::clas
 
 
 //administracine dalis
-//Route::middleware(['auth', 'admin'])->group( function () {
+Route::middleware(['auth', 'admin'])->group( function () {
 Route::get('/administracinis', [App\Http\Controllers\AdminController::class, 'administracinis'])->name('administracinis');
 Route::get('/administracinis/uzsakymai', [App\Http\Controllers\AdminController::class, 'admin_uzsakymai'])->name('admin_uzsakymai');
 Route::get('/administracinis/uzsakymai_patvirtinti/{id}', [App\Http\Controllers\AdminController::class, 'admin_uzsakymai_patvirtinti'])->name('admin_uzsakymai_patvirtinti');
 Route::get('/administracinis/uzsakymai_atmesti/{id}', [App\Http\Controllers\AdminController::class, 'admin_uzsakymai_atmesti'])->name('admin_uzsakymai_atmesti');
-
-
 Route::get('/administracinis/klientai', [App\Http\Controllers\AdminController::class, 'admin_klientai'])->name('admin_klientai');
 Route::get('/administracinis/naujas_klientas', [App\Http\Controllers\AdminController::class, 'admin_prideti_klienta'])->name('admin_naujas_klientas');
 Route::post('/administracinis/naujas_klientas', [App\Http\Controllers\AdminController::class, 'admin_prideti_klienta_post'])->name('admin_naujas_klientas_post');
@@ -62,7 +60,7 @@ Route::get('/administracinis/pasalinti_klienta/{id}', [App\Http\Controllers\Admi
 Route::get('/administracinis/admin_pagalbos_sarasas', [App\Http\Controllers\AdminController::class, 'admin_pagalbos_sarasas'])->name('admin_pagalbos_sarasas');
 Route::get('/administracinis/admin_pokalbio_langas/{id}', [App\Http\Controllers\AdminController::class, 'admin_pokalbio_langas'])->name('admin_pokalbio_langas');
 Route::post('/administracinis/admin_siusti_zinute/{id}', [App\Http\Controllers\AdminController::class, 'siusti_zinute'])->name('siusti_zinute');
-//});
+});
 
 //construction
 Route::get('/katalogas', [CatalogController::class, 'index'])->name('katalogas');
