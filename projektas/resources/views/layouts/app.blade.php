@@ -33,24 +33,26 @@
                 <a class="nav-link" href="{{route('home')}}">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
-                <a class="nav-link" href="{{route('cart')}}">Krepselis <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{route('katalogas')}}">Katalogas<span class="sr-only">(current)</span></a>
             </li>
-            <li class="nav-item active">
-                <a class="nav-link" href="{{route('administracinis')}}">Administracinis <span class="sr-only">(current)</span></a>
-            </li>
+        @if(\Illuminate\Support\Facades\Auth::user())
+
 
             <li class="nav-item active">
-                <a class="nav-link" href="{{route('katalogas')}}">Katalogas<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{{route('cart')}}">Krepselis <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('pagalba')}}">Pagalba <span class="sr-only">(current)</span></a>
             </li>
 
+            @if(\Illuminate\Support\Facades\Auth::user()->isAdmin())
+                <li class="nav-item active">
+                    <a class="nav-link" href="{{route('administracinis')}}">Administracinis <span class="sr-only">(current)</span></a>
+                </li>
+            @endif
+            @endif
         </ul>
-        <form class="form-inline my-2 my-lg-0">
-            <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
+
         <div id="app">
         <div class="collapse navbar-collapse" id="navbarSupportedContent">
             <!-- Left Side Of Navbar -->

@@ -22,7 +22,7 @@ class AdminAuthenticated
                 return $next($request);
             }
             else{
-                return redirect(route('/home'));
+                return redirect(route('/'));
             }
         }
         abort(404);  // for other user throw 404 error
