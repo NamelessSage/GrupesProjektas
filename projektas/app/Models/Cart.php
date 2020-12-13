@@ -22,7 +22,7 @@ class Cart extends Model
     }
     public function getTotalPrice()
     {
-        return $this->cart_parts->sum('total_price');
+        return $this->cart_parts->sum('total_price')*(1-$this->discount/100);
     }
     public function discount(){
         return $this->hasOne(Discount::class);

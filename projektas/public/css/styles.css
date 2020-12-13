@@ -1,0 +1,25 @@
+.qty input{
+    width: 50px;
+}
+.sepLine{
+    width: 80%;
+    text-align: center;
+    border-width:2px;
+    background-color:blue;
+}
+.discount input{
+    width: 200px;
+}
+.cartTitle{
+    text-align: center;
+    color: #0c5460;
+    margin-bottom: 2%;
+}
+.checkout{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+.total-price{
+    margin-right: 20px;
+}
