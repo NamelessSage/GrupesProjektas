@@ -8,6 +8,8 @@ use App\Models\User;
 use Illuminate\Foundation\Auth\RegistersUsers;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Validator;
+use Illuminate\Support\Facades\Mail;
+use App\Models\Klientas;
 
 class RegisterController extends Controller
 {
@@ -66,12 +68,29 @@ class RegisterController extends Controller
      */
     protected function create(array $data)
     {
-        return User::create([
+         $email_data = array(
+                'name' => $data['name'],
+                'email' => $data['email'],
+            );
+        Mail::send('welcome_email', $email_data, function ($message) use ($email_data) {
+                $message->to($email_data['email'], $email_data['name'])
+                    ->subject('Welcome to Komapi')
+                    ->from('kompai@kompai.com', 'Kompai');
+            });
+       $tarp = User::create([
             'vardas' => $data['name'],
             'pavarde' => $data['lastname'],
             'username' => $data['username'],
             'email' => $data['email'],
+            'role' => $data['role'],
             'password' => Hash::make($data['password']),
         ]);
+
+        Klientas::create([
+                    'user_id' => $tarp->id,
+                ]);
+
+        return $tarp;
+
     }
 }

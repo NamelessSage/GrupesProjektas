@@ -38,6 +38,10 @@ Route::post('/redaguoti_profili', [App\Http\Controllers\KlientoController::class
 Route::get('/atsiliepimai', [App\Http\Controllers\KlientoController::class, 'atsiliepimai'])->name('atsiliepimai');
 Route::get('/delete_user', [App\Http\Controllers\KlientoController::class, 'delete_user'])->name('delete_user');
 Route::get('/pagalba', [App\Http\Controllers\KlientoController::class, 'pagalba'])->name('pagalba');
+Route::post('/add',[App\Http\Controllers\KlientoController::class, 'add']);
+Route::post('/pridet_pagalba',[App\Http\Controllers\KlientoController::class, 'pridet_pagalba']);
+Route::get('pokalbio_langas/{id}', [App\Http\Controllers\KlientoController::class, 'pokalbio_langas'])->name('pokalbio_langas');
+
 
 
 //administracine dalis
@@ -78,4 +82,5 @@ Route::get('/addToCart', [CartController::class, 'addToCart'])->name('addToCart'
 Route::get('cart', [CartController::class, 'index'])->name('cart');
 Route::get('delete-cart-part/{id}', [CartPartController::class, 'destroy'])->name('destroyCartPart');
 Route::get('make-order/{cart}', [OrderController::class, 'create'])->name('makeOrder');
-Route::get('discount', [DiscountController::class, 'create'])->name('createDiscount');
+Route::get('discount/{cart}', [CartController::class, 'addDiscount'])->name('createDiscount');
+Route::post('changeQuantity/{cartPart}', [CartPartController::class, 'changeQuantity'])->name('changeQuantity');

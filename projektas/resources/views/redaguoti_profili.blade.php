@@ -12,10 +12,6 @@
                         <form action="{{route('redaguoti_profilipost')}}" method="post">
                             @csrf
                         <div class="card-body">
-{{--                            <div class="col-md-4 mb-4">--}}
-{{--                                <div>Profilio informacija</div>--}}
-{{--                                <div class="text-muted small">Matoma visu</div>--}}
-{{--                            </div>--}}
                             <div class="col-md-8">
                                 <div class="row">
                                     <div class="col-md-6">
@@ -32,16 +28,6 @@
                                         <div class="form-group">
                                             <label class="form-control-label">Pavardė</label>
                                             <input name="lastname" class="form-control" value="{{Auth::user()->pavarde}}">
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-8">
-                                <div class="row">
-                                    <div class="col-md-6">
-                                        <div class="form-group">
-                                            <label class="form-control-label">Prisijungimo vardas</label>
-                                            <input name="username" class="form-control" value="{{Auth::user()->username}}">
                                         </div>
                                     </div>
                                 </div>
@@ -71,12 +57,13 @@
                                     <div class="col-md-6">
                                         <div class="form-group">
                                             <label class="form-control-label">Gimimo metai</label>
-                                            <input name ="date" class="form-control" value="{{Auth::user()->gimimo_metai}}">
+                                            <input name ="date" type = "date" class="form-control" value="{{Auth::user()->gimimo_metai}}">
                                         </div>
                                     </div>
                                 </div>
                             </div>
                             <div class="card-footer bg-light ">
+                                <div class="small">*Norint pakeisti savo duomenis būtina įrašyti telefono numerį ir gimimo metus </div>
                                 <button type="submit" class="btn btn-primary">Save Changes</button>
                             </div>
                         </div>

@@ -66,7 +66,7 @@
                                 @enderror
                             </div>
                         </div>
-
+                        <input type="hidden" class="form-control" id="role" name="role" value="klientas">
                         <div class="form-group row">
                             <label for="password" class="col-md-4 col-form-label text-md-right">{{ __('Password') }}</label>
 
