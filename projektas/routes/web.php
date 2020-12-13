@@ -39,6 +39,9 @@ Route::get('/atsiliepimai', [App\Http\Controllers\KlientoController::class, 'ats
 Route::get('/delete_user', [App\Http\Controllers\KlientoController::class, 'delete_user'])->name('delete_user');
 Route::get('/pagalba', [App\Http\Controllers\KlientoController::class, 'pagalba'])->name('pagalba');
 Route::post('/add',[App\Http\Controllers\KlientoController::class, 'add']);
+Route::post('/pridet_pagalba',[App\Http\Controllers\KlientoController::class, 'pridet_pagalba']);
+Route::get('pokalbio_langas/{id}', [App\Http\Controllers\KlientoController::class, 'pokalbio_langas'])->name('pokalbio_langas');
+
 
 
 //administracine dalis
