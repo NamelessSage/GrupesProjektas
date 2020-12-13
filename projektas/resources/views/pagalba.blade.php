@@ -4,7 +4,7 @@
     <div class="container">
         <div class="">
             <div class="col-md-15">
-                <div class="card">
+                <div class="">
                     <div class="card-header">{{ __('Pagalbu sarasas') }}</div>
                     <div class="card-body">
                         <table class="table">
@@ -29,8 +29,8 @@
                         </table>
                     </div>
                 </div>
-
-                <div class="card-header bg-light">
+                <div class="container">
+                <div class="card-header ">
                         Profilio redagavimas
                     </div>
                     <form action="pridet_pagalba" method="post">
@@ -57,11 +57,11 @@
                             </div>
                         </div>
                             <div class="card-footer bg-light ">
-                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="submit" class="btn btn-primary">Išsaugoti</button>
                             </div>
-                        </div>
                     </form>
                   </div>
+                </div>
              </div>
         </div>
     </div>

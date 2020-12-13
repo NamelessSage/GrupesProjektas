@@ -23,7 +23,7 @@
                     <input type="text" class="form-control"name="tekstas" placeholder="Komentaras">
                 </div>
                 <div class="form-group">
-                    <button type="submit" class="btn btn-primary btn-block">Save</button>
+                    <button type="submit" class="btn btn-primary btn-block">Išsaugoti</button>
                 </div>
             </form>
             <table class=" table table-hover">
