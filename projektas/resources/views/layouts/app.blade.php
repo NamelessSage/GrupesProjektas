@@ -42,9 +42,11 @@
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('cart')}}">Krepselis <span class="sr-only">(current)</span></a>
             </li>
+                @if(!\Illuminate\Support\Facades\Auth::user()->isAdmin())
             <li class="nav-item active">
                 <a class="nav-link" href="{{route('pagalba')}}">Pagalba <span class="sr-only">(current)</span></a>
             </li>
+                @endif
 
             @if(\Illuminate\Support\Facades\Auth::user()->isAdmin())
                 <li class="nav-item active">

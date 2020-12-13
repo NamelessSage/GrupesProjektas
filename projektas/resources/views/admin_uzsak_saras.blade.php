@@ -5,11 +5,11 @@
         <div class="row justify-content-center">
             <div class="col-md-15">
                 <div class="card">
-                    <div class="card-header">{{ __('Uzsakymu sarasas') }}</div>
+                    <div class="card-header">{{ __('Užsakymų sąrašas') }}</div>
                     <div class="card-body">
                         <table class="table">
                             <tr>
-                                <th>Uzsakymo id</th>
+                                <th>Užsakymo id</th>
                                 <th>Kaina</th>
                                 <th>Veiksmas</th>
                             </tr>

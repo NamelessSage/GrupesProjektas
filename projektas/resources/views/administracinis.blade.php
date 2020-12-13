@@ -1,10 +1,10 @@
 @extends('layouts.app')
 
 @section('content')
-    <p><a href="{{route('admin_uzsakymai')}}">Uzsakymu sarasas</a></p>
-    <p><a href="{{route('admin_klientai')}}">Klientu sarasas</a></p>
-    <p><a href="{{route('admin_naujas_klientas')}}">Prideti klienta</a></p>
-    <p><a href="{{route('admin_pagalbos_sarasas')}}">Pagalbos sarasas</a></p>
+   <a href="{{route('admin_uzsakymai')}}"><button type="button" class="btn btn-primary sign-bttn1"  style="margin: 10px">Užsakymų sąrašas</button></a>
+   <a href="{{route('admin_klientai')}}"><button type="button" class="btn btn-primary sign-bttn1"  style="margin: 10px">Klientų sąrašas</button></a>
+   <a href="{{route('admin_naujas_klientas')}}"><button type="button" class="btn btn-primary sign-bttn1"  style="margin: 10px">Pridėti klientą</button></a>
+   <a href="{{route('admin_pagalbos_sarasas')}}"><button type="button" class="btn btn-primary sign-bttn1"  style="margin: 10px">Pagalbos sąrašas</button></a>
 
 
 
