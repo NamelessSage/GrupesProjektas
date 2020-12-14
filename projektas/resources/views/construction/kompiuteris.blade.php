@@ -1,7 +1,67 @@
 @extends('layouts.app')
 
 @section('content')
-            Užsakymas:
+    <style>
+        body {
+            font-family: "Lato", sans-serif;
+        }
+
+        .sidenav {
+            width: 15%;
+            position: fixed;
+            z-index: 1;
+            top: 87px;
+            left: 10px;
+            background: #eee;
+            overflow-x: hidden;
+            padding: 8px 0;
+            display: inline-block;
+
+        }
+
+        .sidenav a {
+            display: block;
+            margin: 2px auto 4px auto;
+            width: 80%;
+        }
+
+        .sidenav select{
+            display: block;
+            margin: 2px auto 4px auto;
+            width: 80%;
+        }
+
+        .sidenav a:hover {
+            color: #064579;
+        }
+
+        .main {
+            margin-left: 15%; /* Same width as the sidebar + left position in px */
+            padding: 0px 10px;
+        }
+
+        h1 {
+            display: block;
+            text-align: center;
+            font-size: 2em;
+            margin-top: 0.67em;
+            margin-bottom: 0.67em;
+            margin-left: 0;
+            margin-right: 0;
+            font-weight: bold;
+        }
+
+        @media screen and (max-height: 450px) {
+            .sidenav {padding-top: 15px;}
+            .sidenav a {font-size: 18px;}
+        }
+    </style>
+    <div class="sidenav p-1">
+        <a class="btn btn-primary" href="{{route('katalogas')}}">Katalogas</a>
+        <a class="btn btn-success" href="{{ route('addToCart') }}">Patvirtinti</a>
+    </div>
+    <div class="main">
+        <h1>Kompiuteris</h1>
             <div class="row p-5">
                 @if($values!=null)
                     @foreach($values as $part)
@@ -18,19 +78,12 @@
                                 <li class="list-group-item">{{ $part->category }}</li>
                             </ul>
                             <div class="card-body">
-                                <a href="{{ $part->link }}" class="card-link">Apžiurėti</a>
-                                <a href="{{ route('deletePart', $part->id) }}" class="card-link">Išmesti</a>
+                                <a href="{{ $part->link }}" class="btn btn-primary">Apžiurėti</a>
+                                <a href="{{ route('deletePart', $part->id) }}" class="btn btn-danger">Išmesti</a>
                             </div>
                         </div>
 
                     @endforeach
-{{--                        <form method="get" action="{{ route('addToCart', $values) }}">--}}
-{{--                            @csrf--}}
-{{--                            <input type="hidden" name="values" value="{{ $values}}">--}}
-{{--                            <button type="submit" name="button" class="btn btn-orange">Add to cart</button>--}}
-{{--                        </form>--}}
-                        <a href="{{ route('addToCart') }}" class="card-link">adina</a>
-{{--                        <a href="{{ route('cart.add, $values') }}"><button  type="button" name="button" class="btn btn-orange">Add to cart</button></a>--}}
                 @else
                     <p>Dabar nėra detalių.</p>
                 @endif
