@@ -41,7 +41,7 @@ Route::get('/pagalba', [App\Http\Controllers\KlientoController::class, 'pagalba'
 Route::post('/add',[App\Http\Controllers\KlientoController::class, 'add']);
 Route::post('/pridet_pagalba',[App\Http\Controllers\KlientoController::class, 'pridet_pagalba']);
 Route::get('pokalbio_langas/{id}', [App\Http\Controllers\KlientoController::class, 'pokalbio_langas'])->name('pokalbio_langas');
-
+Route::post('siusti_zinute/{id}', [App\Http\Controllers\KlientoController::class, 'siusti_zinute_klientas'])->name('siusti_zinute_klientas');
 
 
 //administracine dalis
