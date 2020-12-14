@@ -18,8 +18,8 @@
                                     <td>{{ $uzsakymas->status }} </td>
                                     <td>{{ $uzsakymas->carts->getTotalPrice() }} </td>
                                     <td>
-                                        <a href="{{route('admin_uzsakymai_patvirtinti', $uzsakymas->id)}}"><button class="btn btn-primary" style="margin: 5px">Patvirtinti</button></a>
-                                        <a href="{{route('admin_uzsakymai_atmesti', $uzsakymas->id)}}"><button class="btn btn-primary" style="margin: 5px">Atmesti</button></a>
+                                        <a href="{{route('admin_uzsakymai_patvirtinti', $uzsakymas->id)}}"><button class="btn btn-primary" onclick="return confirm('Ar tikrai nori patvirtinti užsakymą?'); " style="margin: 5px">Patvirtinti</button></a>
+                                        <a href="{{route('admin_uzsakymai_atmesti', $uzsakymas->id)}}"><button class="btn btn-primary" onclick="return confirm('Ar tikrai nori atšaukti užsakymą?'); " style="margin: 5px">Atmesti</button></a>
                                     </td>
                                 </tr>
                             @endforeach
