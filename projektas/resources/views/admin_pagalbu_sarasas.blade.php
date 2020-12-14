@@ -5,7 +5,7 @@
         <div class="row justify-content-center">
             <div class="col-md-15">
                 <div class="card">
-                    <div class="card-header">{{ __('Pagalbu sarasas') }}</div>
+                    <div class="card-header">{{ __('Pagalbų sąrašas') }}</div>
                     <div class="card-body">
                         <table class="table">
                             <tr>
@@ -23,7 +23,7 @@
                                         {{$pokalbis->tema}}
                                     </td>
                                     <td>
-                                        <a href="{{route('admin_pokalbio_langas', $pokalbis->id)}}"><button class="btn btn-primary" style="margin: 5px">Rasyti</button></a>
+                                        <a href="{{route('admin_pokalbio_langas', $pokalbis->id)}}"><button class="btn btn-primary" style="margin: 5px">Pokalbis</button></a>
                                     </td>
                                 </tr>
                                 @endif
