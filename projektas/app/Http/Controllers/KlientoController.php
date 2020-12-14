@@ -92,7 +92,7 @@ class KlientoController extends Controller
          public function pokalbio_langas($id)
          {
              $zinutes = Zinutes::where('pokalbio_id', $id)->orderBy('created_at', 'desc')->get();
-             return view('admin_pokalbio_langas', ['zinutes'=>$zinutes, 'pokalbis'=>$id]);
+             return view('pokalbio_langas', ['zinutes'=>$zinutes, 'pokalbis'=>$id]);
          }
 
          public function siusti_zinute_klientas($id, Request $request)

@@ -56,7 +56,7 @@
                                 <div class="row">
                                     <div class="col-md-6">
                                         <div class="form-group">
-                                            <label class="form-control-label">Gimimo metai</label>
+                                            <label class="form-control-label">Gimimo data</label>
                                             <input name ="date" type = "date" class="form-control" value="{{Auth::user()->gimimo_metai}}">
                                         </div>
                                     </div>
@@ -64,7 +64,7 @@
                             </div>
                             <div class="card-footer bg-light ">
                                 <div class="small">*Norint pakeisti savo duomenis būtina įrašyti telefono numerį ir gimimo metus </div>
-                                <button type="submit" class="btn btn-primary">Save Changes</button>
+                                <button type="submit" class="btn btn-primary">Išsaugoti</button>
                             </div>
                         </div>
                         </form>
