@@ -22,6 +22,10 @@ class Cart extends Model
     }
     public function getTotalPrice()
     {
+        if($this->discount == 1){
+            $discount = 0;
+            return $this->cart_parts->sum('total_price')*(1-$discount/100);
+        }
         return $this->cart_parts->sum('total_price')*(1-$this->discount/100);
     }
     public function discount(){

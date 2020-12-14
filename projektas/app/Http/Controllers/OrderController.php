@@ -19,6 +19,6 @@ class OrderController extends Controller
             $cart->save();
         }
 
-        return back();
+        return redirect()->route('katalogas');
     }
 }

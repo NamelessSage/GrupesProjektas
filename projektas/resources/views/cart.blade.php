@@ -18,7 +18,7 @@
                         </div>
                         <div class="modal-body">
                             <div class="image">
-                                <img src="{{ $cart_part->part->image }}" alt="jack">
+                                <img width="200px" src="{{ $cart_part->part->image }}" alt="jack">
                             </div>
 
                             <div class="card-content">
@@ -46,7 +46,7 @@
                     <td><img width="150px" src="{{ $cart_part->part->image }}" alt="{{ $cart_part->image }}"></td>
                     <td><h3>{{ $cart_part->part->name }}</h3></td>
                     <td>
-                        <button class="btn btn-primary" data-toggle="modal" data-target="#model-{{$cart_part->id}}" type="button" name="button">Preview</button>
+                        <button class="btn btn-primary" data-toggle="modal" data-target="#model-{{$cart_part->id}}" type="button" name="button">Apžiūrėti</button>
                     </td>
 
                     <td><h4>{{ $cart_part->total_price }}€</h4></td>
@@ -55,7 +55,7 @@
                         <td>
                             <div class="qty">
                                 <input type="number" name="qty" value="{{ $cart_part->quantity }}" min="0" >
-                                <button type="submit" class="btn btn-primary">Save</button>
+                                <button type="submit" class="btn btn-primary">Išsaugoti</button>
                             </div>
 
 
@@ -65,7 +65,7 @@
                         <form class="" action="{{ route('destroyCartPart', $cart_part->id) }}" method="get">
                             @csrf
                             @method('DELETE')
-                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Remove</button>
+                            <button type="submit" class="btn btn-danger"><i class="fas fa-trash-alt"></i>Pašalinti</button>
                         </form>
                     </td>
                 </tr>
@@ -90,11 +90,11 @@
             <div class="checkout">
 
                 <div class="total-price">
-                    <h4>Total price: <b>{{ $cart->getTotalPrice()}}</b></h4>
+                    <h4>Galutinė kaina: <b>{{ $cart->getTotalPrice()}}</b></h4>
                 </div>
 
                 <div class="buy-btn">
-                    <a href="{{ route('makeOrder', $cart) }}"> <button type="button" name="button" class="btn btn-success">CHECK-OUT</button> </a>
+                    <a href="{{ route('makeOrder', $cart) }}"> <button type="button" name="button" class="btn btn-success">Apmokėti</button> </a>
                 </div>
             </div>
         </div>
