@@ -2,12 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="e06ce661-4384-49e6-90f4-96aff70517dd" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/GrupesProjektas.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/GrupesProjektas.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektas/app/Http/Controllers/construction/CatalogController.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/app/Http/Controllers/construction/CatalogController.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/projektas/resources/views/construction/catalog.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/resources/views/construction/catalog.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektas/resources/views/construction/kompiuteris.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/resources/views/construction/kompiuteris.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/projektas/resources/views/construction/pildymas.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/resources/views/construction/pildymas.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/projektas/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/projektas/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -185,7 +183,7 @@
       <workItem from="1607246625417" duration="3834000" />
       <workItem from="1607587031883" duration="28907000" />
       <workItem from="1607954623236" duration="1823000" />
-      <workItem from="1607969481726" duration="3039000" />
+      <workItem from="1607969481726" duration="5260000" />
     </task>
     <servers />
   </component>

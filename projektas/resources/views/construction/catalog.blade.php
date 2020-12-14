@@ -26,6 +26,12 @@
             width: 80%;
         }
 
+        .sidenav h5 {
+            display: block;
+            margin: 2px auto 4px auto;
+            width: 80%;
+        }
+
         .sidenav select{
             display: block;
             margin: 2px auto 4px auto;
@@ -35,6 +41,7 @@
         .sidenav a:hover {
             color: #064579;
         }
+
 
         .main {
             margin-left: 15%; /* Same width as the sidebar + left position in px */
@@ -68,12 +75,11 @@
                 <option value="{{ route('sortByName') }}">Pagal pavadinimą.</option>
                 <option value="{{ route('sortByCreator') }}">Pagal gamintoją.</option>
             </select>
-            <select class="form-control form-control-sm" name="cars" onchange="location = this.value;">
-                <option>Filtravimas</option>
-                <option value="{{ route('sortByPrice') }}">Pagal kainą.</option>
-                <option value="{{ route('sortByName') }}">Pagal pavadinimą.</option>
-                <option value="{{ route('sortByCreator') }}">Pagal gamintoją.</option>
-            </select>
+            <h5>Rodyti tik:</h5>
+            <a class="btn btn-primary" href="{{route('onlyHDD')}}">HDD</a>
+            <a class="btn btn-primary" href="{{route('onlyRAM')}}">RAM</a>
+            <a class="btn btn-primary" href="{{route('onlyGPU')}}">GPU</a>
+            <a class="btn btn-primary" href="{{route('onlyCPU')}}">CPU</a>
         </div>
         <div class="main">
             <h1>Katalogas</h1>

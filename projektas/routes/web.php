@@ -69,6 +69,11 @@ Route::get('/katalogas/sortByPrice', [CatalogController::class, 'sortByPrice'])-
 Route::get('/katalogas/sortByName', [CatalogController::class, 'sortByName'])->name('sortByName');
 Route::get('/katalogas/sortByCreator', [CatalogController::class, 'sortByCreator'])->name('sortByCreator');
 
+Route::get('/katalogas/onlyHDD', [CatalogController::class, 'onlyHDD'])->name('onlyHDD');
+Route::get('/katalogas/onlyGPU', [CatalogController::class, 'onlyGPU'])->name('onlyGPU');
+Route::get('/katalogas/onlyRAM', [CatalogController::class, 'onlyRAM'])->name('onlyRAM');
+Route::get('/katalogas/onlyCPU', [CatalogController::class, 'onlyCPU'])->name('onlyCPU');
+
 Route::get('/katalogas/addPart/{id}', [CatalogController::class, 'addPart'])->name('addPart');
 
 Route::get('/kompiuteris', [ComputerController::class, 'index'])->name('kompiuteris');
