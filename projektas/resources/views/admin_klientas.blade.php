@@ -9,6 +9,6 @@
         <b>Telefono numeris:</b> {{$klientas->telefono_nr}} <br/>
         <b>Gimimo metai:</b> {{$klientas->gimimo_metai}} <br/>
         <div><a href="{{route('admin_redaguoti_klienta', $klientas->id)}}"><button type="button" class="btn btn-primary sign-bttn1"  style="margin: 10px">Redaguoti</button></a></div>
-        <div><a class="btn btn-danger" onclick="return confirm('Ar tikrai nori panaikinti klientą?'); " href="{{route('admin_redaguoti_klienta', $klientas->id)}}">Pašalinti klientą</a></div>
+        <div><a class="btn btn-danger" onclick="return confirm('Ar tikrai nori panaikinti klientą?'); " href="{{route('admin_salinti_klienta', $klientas->id)}}">Pašalinti klientą</a></div>
     </div>
 @endsection
